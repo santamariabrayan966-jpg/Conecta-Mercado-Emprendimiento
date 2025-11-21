@@ -100,7 +100,7 @@ function cerrarModal(id) {
 }
 
 /* ============================================================
-   FILTRO POR PERFIL
+   FILTRO POR PERFIL (EMPRENDIMIENTOS)
    ============================================================ */
 const selectPerfil = document.getElementById("filtroPerfil");
 const cards = document.querySelectorAll(".card-pro");
@@ -121,11 +121,4 @@ if (selectPerfil) {
       }
     });
   });
-}
-function abrirModal(id){
-  document.getElementById(id).style.display = "flex";
-}
-
-function cerrarModal(id){
-  document.getElementById(id).style.display = "none";
 }
