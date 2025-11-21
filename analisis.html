@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Análisis de Necesidades | Conecta Mercado</title>
+  <link rel="stylesheet" href="css/estilo.css">
+</head>
+<body>
+
+  <!-- NAV -->
+  <header class="navbar">
+  <img src="https://i.pinimg.com/736x/38/5e/73/385e73381dcdd6b004acf7d2f9cf3d35.jpg" class="logo-navbar" onclick="abrirModal('modalCreditos')" alt="Logo San José">
+
+  <h1>CONECTA MERCADO</h1>
+  <nav>
+      <a href="index.html">Inicio</a>
+      <a href="analisis.html" class="activo">Análisis</a>
+      <a href="emprendimientos.html">Emprendimientos</a>
+      <a href="educacion.html">Educación</a>
+    </nav>
+  </header>
+
+  <!-- HERO -->
+  <section class="subhero analisis">
+    <div class="overlay"></div>
+    <div class="subhero-content">
+      <h2>ANÁLISIS DE NECESIDADES</h2>
+      <p>Identificamos tus oportunidades de negocio con herramientas digitales precisas y un enfoque en resultados reales.</p>
+    </div>
+  </section>
+
+  <!-- CONTENIDO -->
+  <section class="contenido">
+    <h3>¿Por qué analizar tu idea de negocio?</h3>
+    <p>
+      Emprender no es solo tener una idea, sino validar si es rentable y sostenible.
+      En <b>CONECTA MERCADO</b> te ayudamos a evaluar el potencial de tu emprendimiento mediante un diagnóstico digital y un estudio comparativo de mercado.
+    </p>
+
+    <!-- TARJETAS ANALISIS (Adaptadas a tu cards-grid) -->
+    <div class="cards-grid">
+
+      <!-- CARD 1 -->
+      <article class="card-pro" onclick="abrirModal('modal1')">
+        <img src="https://cdn-icons-png.flaticon.com/512/3616/3616848.png" alt="Diagnóstico Digital">
+        <div class="info">
+          <h4>Diagnóstico Digital</h4>
+          <p>Identifica oportunidades y debilidades reales de tu idea.</p>
+        </div>
+      </article>
+
+      <!-- CARD 2 -->
+      <article class="card-pro" onclick="abrirModal('modal2')">
+        <img src="https://cdn-icons-png.flaticon.com/512/1055/1055646.png" alt="Evaluación de Mercado">
+        <div class="info">
+          <h4>Evaluación de Mercado</h4>
+          <p>Tendencias, competencia y proyecciones reales.</p>
+        </div>
+      </article>
+
+      <!-- CARD 3 -->
+      <article class="card-pro" onclick="abrirModal('modal3')">
+        <img src="https://cdn-icons-png.flaticon.com/512/1828/1828884.png" alt="Informe Personalizado">
+        <div class="info">
+          <h4>Informe Personalizado</h4>
+          <p>Conclusiones y acciones para tu emprendimiento.</p>
+        </div>
+      </article>
+
+    </div>
+
+    <!-- BOTONES -->
+    <div style="text-align:center; margin-top:40px; display:flex; justify-content:center; gap:15px; flex-wrap:wrap;">
+
+  <button class="btn-primary-custom"
+          onclick="window.open('https://docs.google.com/forms/d/1z9S6dj0kz9Z9i0_ObJi9IrK3sYgOngA0uGr8HcGXSo8/edit?usp=drivesdk', '_blank')">
+    Ir al formulario
+  </button>
+
+  <button class="btn-secondary-custom"
+          onclick="window.location.href='emprendimientos.html'">
+    Ver emprendimientos
+  </button>
+
+</div>
+
+  </section>
+
+  <!-- =============================== -->
+  <!-- MODALES ADAPTADOS -->
+  <!-- =============================== -->
+
+  <!-- MODAL 1 -->
+  <div id="modal1" class="modal">
+    <div class="modal-content">
+      <span class="cerrar" onclick="cerrarModal('modal1')">&times;</span>
+
+      <h2>Diagnóstico Digital</h2>
+
+      <div class="modal-seccion">
+        <h3>📌 ¿Qué es?</h3>
+        <p>
+          Un análisis que identifica fortalezas, riesgos, capacidades internas y el nivel de preparación de tu idea.
+        </p>
+      </div>
+
+      <div class="modal-seccion">
+        <h3>🧩 ¿Qué evalúa?</h3>
+        <ul>
+          <li>Recursos disponibles</li>
+          <li>Propuesta de valor y diferenciación</li>
+          <li>Público objetivo real</li>
+          <li>Problema que resuelve</li>
+        </ul>
+      </div>
+
+      <div class="modal-seccion">
+        <h3>🚀 ¿Por qué es importante?</h3>
+        <p>
+          Te permite saber si tu idea está lista para convertirse en un negocio rentable antes de invertir dinero.
+        </p>
+      </div>
+    </div>
+  </div>
+
+  <!-- MODAL 2 -->
+  <div id="modal2" class="modal">
+    <div class="modal-content">
+      <span class="cerrar" onclick="cerrarModal('modal2')">&times;</span>
+
+      <h2>Evaluación de Mercado</h2>
+
+      <div class="modal-seccion">
+        <h3>🔍 Análisis del Sector</h3>
+        <p>Identificamos tendencias, crecimiento y oportunidades reales en tu industria.</p>
+      </div>
+
+      <div class="modal-seccion">
+        <h3>📊 Competencia</h3>
+        <p>Analizamos competidores directos, indirectos y su posicionamiento.</p>
+      </div>
+
+      <div class="modal-seccion">
+        <h3>📈 Proyección de Rentabilidad</h3>
+        <p>Estimamos ingresos potenciales, escenarios y viabilidad económica.</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- MODAL 3 -->
+  <div id="modal3" class="modal">
+    <div class="modal-content">
+      <span class="cerrar" onclick="cerrarModal('modal3')">&times;</span>
+
+      <h2>Informe Personalizado</h2>
+
+      <div class="modal-seccion">
+        <h3>📝 Contenido del Informe</h3>
+        <ul>
+          <li>Resumen ejecutivo</li>
+          <li>Análisis FODA</li>
+          <li>Viabilidad técnica y comercial</li>
+          <li>Acciones recomendadas</li>
+        </ul>
+      </div>
+
+      <div class="modal-seccion">
+        <h3>🎯 ¿Qué obtienes?</h3>
+        <p>Un documento profesional que guía tus decisiones estratégicas.</p>
+      </div>
+
+      <div class="modal-seccion">
+        <h3>💡 Ideal para</h3>
+        <p>Presentar ante bancos, inversionistas o incubadoras.</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- FOOTER -->
+  <footer>
+    © 2025 CONECTA MERCADO — Todos los derechos reservados
+  </footer>
+
+  <script src="js/script.js"></script>
+</body>
+<!-- MODAL CREDITOS -->
+<div id="modalCreditos" class="modal">
+  <div class="modal-content" style="max-width:420px; text-align:center;">
+    <span class="cerrar" onclick="cerrarModal('modalCreditos')">&times;</span>
+
+    <h2 style="margin-bottom:10px;">Créditos</h2>
+    <p><b>Colegio Nacional de San José – Chiclayo</b></p>
+
+    <div style="margin-top:18px; text-align:left;">
+      <p><b>Creadores / Representantes:</b></p>
+      <ul style="padding-left:18px; line-height:1.6;">
+        <li>Regalado Gonzales Jheremy Anderson</li>
+        <li>Riojas Escuadra Miguel Alberto</li>
+        <li>Marco Alonso Suclupe Gil</li>
+        <li>Castrejon Olascoaga Leonardo David</li>
+        <li>Guerrero Castañeda Antony Jahir</li>
+      </ul>
+    </div>
+  </div>
+</div>
+
+</html>

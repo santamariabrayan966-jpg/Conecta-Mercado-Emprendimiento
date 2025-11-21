@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CONECTA MERCADO | Inicio</title>
+  <link rel="stylesheet" href="css/estilo.css">
+</head>
+<body>
+  <header class="navbar">
+  <img src="https://i.pinimg.com/736x/38/5e/73/385e73381dcdd6b004acf7d2f9cf3d35.jpg" class="logo-navbar" onclick="abrirModal('modalCreditos')" alt="Logo San José">
+
+  <h1>CONECTA MERCADO</h1>
+  <nav>
+      <a href="index.html" class="activo">Inicio</a>
+      <a href="analisis.html">Análisis</a>
+      <a href="emprendimientos.html">Emprendimientos</a>
+      <a href="educacion.html">Educación</a>
+    </nav>
+  </header>
+
+  <section class="hero" id="inicio">
+    <div class="overlay"></div>
+    <div class="hero-content">
+      <h2>IMPULSA TU NEGOCIO DIGITAL</h2>
+      <p>Transformamos tu presencia en línea con soluciones inteligentes, diseño moderno y estrategia profesional.</p>
+      <button onclick="window.location.href='analisis.html'">Ver análisis</button>
+    </div>
+  </section>
+
+  <footer>
+    © 2025 CONECTA MERCADO — Todos los derechos reservados
+  </footer>
+
+  <script src="js/script.js"></script>
+</body>
+<!-- MODAL CREDITOS -->
+<div id="modalCreditos" class="modal">
+  <div class="modal-content" style="max-width:420px; text-align:center;">
+    <span class="cerrar" onclick="cerrarModal('modalCreditos')">&times;</span>
+
+    <h2 style="margin-bottom:10px;">Créditos</h2>
+    <p><b>Colegio Nacional de San José – Chiclayo</b></p>
+
+    <div style="margin-top:18px; text-align:left;">
+      <p><b>Creadores / Representantes:</b></p>
+      <ul style="padding-left:18px; line-height:1.6;">
+        <li>Regalado Gonzales Jheremy Anderson</li>
+        <li>Riojas Escuadra Miguel Alberto</li>
+        <li>Marco Alonso Suclupe Gil</li>
+        <li>Castrejon Olascoaga Leonardo David</li>
+        <li>Guerrero Castañeda Antony Jahir</li>
+      </ul>
+    </div>
+  </div>
+</div>
+
+</html>

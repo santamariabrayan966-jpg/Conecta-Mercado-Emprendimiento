@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Formulario de Análisis | Conecta Mercado</title>
+  <link rel="stylesheet" href="css/estilo.css" />
+  <style>
+    /* Opcional: por si quieres un estilo parecido al de la captura */
+    .form-page {
+      min-height: 100vh;
+      padding-top: 90px;
+      display: flex;
+      justify-content: center;
+      align-items: flex-start;
+      background: linear-gradient(to bottom, #eef3ff, #ffffff);
+    }
+    .form-card {
+      background: #ffffff;
+      max-width: 800px;
+      width: 100%;
+      margin: 30px 16px 50px;
+      padding: 30px 26px;
+      border-radius: 18px;
+      box-shadow: 0 10px 30px rgba(15,23,42,0.12);
+    }
+    .form-card h1 {
+      text-align: center;
+      color: #1e3a8a;
+      margin-bottom: 22px;
+      font-size: 1.6rem;
+    }
+    .form-group {
+      margin-bottom: 16px;
+    }
+    .form-group label {
+      display: block;
+      margin-bottom: 6px;
+      font-weight: 600;
+      color: #374151;
+      font-size: 0.95rem;
+    }
+    .form-group input,
+    .form-group select,
+    .form-group textarea {
+      width: 100%;
+      padding: 10px 12px;
+      border-radius: 10px;
+      border: 1px solid #d1d5db;
+      font-size: 0.95rem;
+      outline: none;
+      transition: 0.2s;
+      font-family: inherit;
+    }
+    .form-group textarea {
+      min-height: 90px;
+      resize: vertical;
+    }
+    .form-group input:focus,
+    .form-group select:focus,
+    .form-group textarea:focus {
+      border-color: #2563eb;
+      box-shadow: 0 0 0 2px #3b82f64d;
+    }
+    .form-actions {
+      margin-top: 20px;
+      display: flex;
+      justify-content: flex-end;
+      gap: 10px;
+      flex-wrap: wrap;
+    }
+    .btn-primary {
+      background: #2563eb;
+      color: #ffffff;
+      border: none;
+      padding: 10px 18px;
+      border-radius: 999px;
+      font-weight: 600;
+      cursor: pointer;
+      font-size: 0.95rem;
+      box-shadow: 0 8px 18px rgba(37,99,235,0.35);
+      transition: 0.2s;
+    }
+    .btn-primary:hover {
+      background: #1d4ed8;
+      transform: translateY(-1px);
+    }
+    .form-check {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      font-size: 0.9rem;
+      color: #4b5563;
+      margin-top: 8px;
+    }
+    .form-check input {
+      width: auto;
+    }
+  </style>
+</head>
+<body>
+  <!-- NAV -->
+  <header class="navbar">
+    <h1>CONECTA MERCADO</h1>
+    <nav>
+      <a href="index.html">Inicio</a>
+      <a href="analisis.html" class="activo">Análisis</a>
+      <a href="emprendimientos.html">Emprendimientos</a>
+      <a href="educacion.html">Educación</a>
+    </nav>
+  </header>
+
+  <!-- FORMULARIO -->
+  <main class="form-page">
+    <div class="form-card">
+      <h1>Formulario de Análisis de Necesidades</h1>
+
+      <!-- IMPORTANTE: action -> FormSubmit, para que llegue a tu correo -->
+      <form id="analisisForm"
+            action="https://formsubmit.co/jregaladog@cndesanjose.edu.pe"
+            method="POST">
+
+        <!-- Config extra para FormSubmit -->
+        <input type="hidden" name="_subject" value="Nuevo análisis desde Conecta Mercado">
+        <input type="hidden" name="_template" value="table">
+        <input type="hidden" name="_captcha" value="false">
+
+        <div class="form-group">
+          <label for="nombre">Nombre completo:</label>
+          <input type="text" id="nombre" name="nombre" required />
+        </div>
+
+        <div class="form-group">
+          <label for="correo">Correo electrónico:</label>
+          <input type="email" id="correo" name="correo" required />
+        </div>
+
+        <div class="form-group">
+          <label for="telefono">Número de WhatsApp:</label>
+          <input type="tel" id="telefono" name="telefono"
+                 placeholder="+51 9XX XXX XXX" required />
+        </div>
+
+        <div class="form-group">
+          <label for="sector">¿En qué sector te interesa emprender?</label>
+          <select id="sector" name="sector" required>
+            <option value="">Selecciona una opción</option>
+            <option value="tecnologia-digital">Tecnología / Digital</option>
+            <option value="servicios">Servicios profesionales</option>
+            <option value="educacion">Educación / Formación</option>
+            <option value="salud-bienestar">Salud y bienestar</option>
+            <option value="comercio">Comercio / Tienda física o online</option>
+            <option value="otro">Otro / No definido aún</option>
+          </select>
+        </div>
+
+        <div class="form-group">
+          <label for="experiencia">¿Tienes experiencia previa en este sector?</label>
+          <select id="experiencia" name="experiencia" required>
+            <option value="">Selecciona</option>
+            <option value="ninguna">Ninguna</option>
+            <option value="basica">Básica</option>
+            <option value="intermedia">Intermedia</option>
+            <option value="avanzada">Avanzada</option>
+          </select>
+        </div>
+
+        <div class="form-group">
+          <label for="presupuesto">¿Con cuánto presupuesto inicial cuentas?</label>
+          <select id="presupuesto" name="presupuesto" required>
+            <option value="">Selecciona</option>
+            <option value="0-500">S/ 0 – S/ 500</option>
+            <option value="500-2000">S/ 500 – S/ 2,000</option>
+            <option value="2000-5000">S/ 2,000 – S/ 5,000</option>
+            <option value="5000-10000">S/ 5,000 – S/ 10,000</option>
+            <option value="10000-mas">Más de S/ 10,000</option>
+          </select>
+        </div>
+
+        <div class="form-group">
+          <label for="idea">Describe brevemente tu idea de negocio:</label>
+          <textarea id="idea" name="idea" required></textarea>
+        </div>
+
+        <div class="form-group">
+          <label for="objetivo">¿Cuál es tu principal objetivo con este análisis?</label>
+          <select id="objetivo" name="objetivo" required>
+            <option value="">Selecciona</option>
+            <option value="validar-idea">Validar si mi idea es viable</option>
+            <option value="mejorar-negocio">Mejorar un negocio que ya tengo</option>
+            <option value="definir-habilidades">Saber qué habilidades debo aprender</option>
+            <option value="buscar-oportunidades">Encontrar oportunidades de negocio</option>
+            <option value="otro">Otro objetivo</option>
+          </select>
+        </div>
+
+        <div class="form-group">
+          <label for="aprendizaje">¿Qué tipo de formación prefieres?</label>
+          <select id="aprendizaje" name="aprendizaje">
+            <option value="">Selecciona</option>
+            <option value="videos">Videos grabados</option>
+            <option value="en-vivo">Clases en vivo</option>
+            <option value="lecturas">Lecturas / guías</option>
+            <option value="cursos-practicos">Cursos prácticos con ejercicios</option>
+            <option value="mentoria">Mentoría personalizada</option>
+          </select>
+        </div>
+
+        <div class="form-group">
+          <label for="tiempo">¿Cuánto tiempo a la semana puedes dedicar?</label>
+          <select id="tiempo" name="tiempo">
+            <option value="">Selecciona</option>
+            <option value="1-3">1 – 3 horas</option>
+            <option value="3-5">3 – 5 horas</option>
+            <option value="5-10">5 – 10 horas</option>
+            <option value="10-mas">Más de 10 horas</option>
+          </select>
+        </div>
+
+        <div class="form-check">
+          <input type="checkbox" id="acepto" name="acepto" required />
+          <label for="acepto">
+            Acepto ser contactado por correo y WhatsApp para recibir mi análisis personalizado.
+          </label>
+        </div>
+
+        <div class="form-actions">
+          <button type="submit" class="btn-primary">Enviar análisis</button>
+        </div>
+      </form>
+    </div>
+  </main>
+
+  <!-- FOOTER -->
+  <footer>
+    © 2025 CONECTA MERCADO — Todos los derechos reservados
+  </footer>
+
+  <!-- SCRIPT: enviar a CORREO (FormSubmit) + WHATSAPP -->
+ <script>
+  const form = document.getElementById('analisisForm');
+
+  form.addEventListener('submit', function (e) {
+    const nombre = form.nombre.value.trim();
+    const correo = form.correo.value.trim();
+    const telefono = form.telefono.value.trim();
+    const sector = form.sector.value;
+    const experiencia = form.experiencia.value;
+    const presupuesto = form.presupuesto.value;
+    const idea = form.idea.value.trim();
+    const objetivo = form.objetivo.value;
+    const aprendizaje = form.aprendizaje.value || 'No especificado';
+    const tiempo = form.tiempo.value || 'No especificado';
+
+    let mensaje = `Hola, soy ${nombre} y acabo de completar el Formulario de Análisis en Conecta Mercado.%0A%0A`;
+    mensaje += `Correo: ${correo}%0A`;
+    mensaje += `Mi WhatsApp: ${telefono}%0A%0A`;
+    mensaje += `Sector donde quiero emprender: ${sector}%0A`;
+    mensaje += `Experiencia en el sector: ${experiencia}%0A`;
+    mensaje += `Presupuesto inicial: ${presupuesto}%0A%0A`;
+    mensaje += `Mi idea de negocio:%0A${idea}%0A%0A`;
+    mensaje += `Objetivo del análisis: ${objetivo}%0A`;
+    mensaje += `Tipo de formación preferida: ${aprendizaje}%0A`;
+    mensaje += `Tiempo disponible por semana: ${tiempo}`;
+
+    const url = `https://wa.me/51950377751?text=${mensaje}`;
+    window.open(url, '_blank');
+  });
+</script>
+
+</body>
+</html>

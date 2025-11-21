@@ -1,0 +1,349 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Educación para Emprender | Conecta Mercado</title>
+  <link rel="stylesheet" href="css/estilo.css" />
+</head>
+<body>
+  <!-- NAV -->
+ <header class="navbar">
+  <img src="https://i.pinimg.com/736x/38/5e/73/385e73381dcdd6b004acf7d2f9cf3d35.jpg" class="logo-navbar" onclick="abrirModal('modalCreditos')" alt="Logo San José">
+
+  <h1>CONECTA MERCADO</h1>
+  <nav>
+      <a href="index.html">Inicio</a>
+      <a href="analisis.html">Análisis</a>
+      <a href="emprendimientos.html">Emprendimientos</a>
+      <a href="educacion.html" class="activo">Educación</a>
+    </nav>
+  </header>
+
+  <!-- HERO EDUCACIÓN PARA EMPRENDER -->
+  <section class="subhero educacion">
+    <div class="overlay"></div>
+    <div class="subhero-content">
+      <h2>EDUCACIÓN PARA EMPRENDER</h2>
+      <p>
+        Aprende las habilidades, áreas estratégicas y cursos esenciales para emprender con éxito en el mundo digital y tradicional.
+      </p>
+    </div>
+  </section>
+
+  <!-- CONTENIDO -->
+  <section class="contenido">
+    <h3>Formación que impulsa tu emprendimiento</h3>
+    <p>
+      Para emprender no necesitas títulos complicados, sino habilidades prácticas: ventas, marketing, tecnología, organización
+      y gestión financiera. Esta página reúne la educación más útil para lanzar o mejorar tu negocio, todo en un solo lugar.
+    </p>
+
+    <!-- DASHBOARD RESUMEN EDUCACIÓN PARA EMPRENDER -->
+    <div class="dashboard-resumen">
+      <div class="kpi">
+        <span class="kpi-label">Tiempo para aplicar lo aprendido</span>
+        <span class="kpi-value">30 – 90 días</span>
+        <span class="kpi-tag">Resultados rápidos</span>
+      </div>
+
+      <div class="kpi">
+        <span class="kpi-label">Inversión formativa recomendada</span>
+        <span class="kpi-value">S/ 0 – S/ 1,200</span>
+        <span class="kpi-tag">Cursos accesibles</span>
+      </div>
+
+      <div class="kpi">
+        <span class="kpi-label">Habilidades clave</span>
+        <span class="kpi-value">Marketing, IA, Finanzas</span>
+        <span class="kpi-tag">Impulso emprendedor</span>
+      </div>
+
+      <div class="dashboard-filtros">
+        <label for="filtroEdu">Filtrar por perfil:</label>
+        <select id="filtroEdu">
+          <option value="todos">Todos</option>
+          <option value="baja-inversion">Baja inversión</option>
+          <option value="docentes">Docentes / Formadores</option>
+          <option value="corporativo">Corporativo</option>
+          <option value="tecnologia">Tecnología educativa</option>
+        </select>
+      </div>
+    </div>
+
+    <!-- ========================= -->
+    <!-- GRID (TODO JUNTO) -->
+    <!-- ========================= -->
+    <div class="cards-grid">
+
+      <!-- Plataforma de aprendizaje (CURSO / HABILIDAD) -->
+      <article class="card-pro"
+               data-perfil="tecnologia digital corporativo"
+               onclick="abrirModal('edu-plataformas')">
+        <img src="https://moodlecentro.es/wp-content/uploads/2023/11/Que-son-las-plataformas-educativas-1024x768.webp" />
+        <div class="info">
+          <h4>Curso de Creación de Plataformas Educativas</h4>
+          <p>Aprende a crear cursos, landing pages y contenido educativo rentable.</p>
+          <div class="metricas">
+            <div><span>+15%</span><small>Demanda</small></div>
+            <div><span>Baja</span><small>Inversión</small></div>
+            <div><span>Alta</span><small>Escalabilidad</small></div>
+          </div>
+        </div>
+      </article>
+
+      <!-- Tutorías personalizadas (HABILIDAD) -->
+      <article class="card-pro"
+               data-perfil="baja-inversion docentes"
+               onclick="abrirModal('edu-tutorias')">
+        <img src="https://thumbs.dreamstime.com/b/clases-particulares-y-su-educaci%C3%B3n-en-l%C3%ADnea-aprendiendo-al-profesor-de-la-educaci%C3%B3n-89362139.jpg" />
+        <div class="info">
+          <h4>Tutorías para Emprender</h4>
+          <p>Aprende a enseñar habilidades, crear mentorías y vender asesorías.</p>
+          <div class="metricas">
+            <div><span>+12%</span><small>Retención</small></div>
+            <div><span>Mínima</span><small>Inversión</small></div>
+            <div><span>Alta</span><small>Demanda</small></div>
+          </div>
+        </div>
+      </article>
+
+      <!-- Realidad aumentada (ÁREA estratégica) -->
+      <article class="card-pro"
+               data-perfil="tecnologia innovacion"
+               onclick="abrirModal('edu-ra')">
+        <img src="https://datos.gob.es/sites/default/files/styles/wide/public/blog/image/realidad_aumentada.jpg?itok=zvULEu8b" />
+        <div class="info">
+          <h4>Tecnologías Educativas para Emprender</h4>
+          <p>Integra RA y experiencias interactivas para elevar tus servicios o cursos.</p>
+          <div class="metricas">
+            <div><span>+18%</span><small>Tendencia</small></div>
+            <div><span>Media</span><small>Inversión</small></div>
+            <div><span>Alta</span><small>Innovación</small></div>
+          </div>
+        </div>
+      </article>
+
+      <!-- IA educativa (ÁREA + HABILIDAD) -->
+      <article class="card-pro"
+               data-perfil="tecnologia innovacion corporativo"
+               onclick="abrirModal('edu-ia')">
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRJR0Vd4qbYWVTeglhyShTmsfxrMdAxijGaug&s" />
+        <div class="info">
+          <h4>IA para Emprender</h4>
+          <p>Automatiza, genera contenido y mejora tu productividad usando IA.</p>
+          <div class="metricas">
+            <div><span>+22%</span><small>Tendencia</small></div>
+            <div><span>Baja</span><small>Inversión</small></div>
+            <div><span>Muy alta</span><small>Utilidad</small></div>
+          </div>
+        </div>
+      </article>
+
+      <!-- Cursos corporativos (CURSO práctico) -->
+      <article class="card-pro"
+               data-perfil="corporativo baja-inversion"
+               onclick="abrirModal('edu-corporativo')">
+        <img src="https://www.shutterstock.com/image-vector/isometric-vector-business-people-presentation-600nw-2484157419.jpg" />
+        <div class="info">
+          <h4>Curso de Educación Corporativa</h4>
+          <p>Aprende a capacitar empresas en liderazgo, ventas y habilidades digitales.</p>
+          <div class="metricas">
+            <div><span>+12%</span><small>Demanda</small></div>
+            <div><span>Baja</span><small>Inversión</small></div>
+            <div><span>Alta</span><small>Rentabilidad</small></div>
+          </div>
+        </div>
+      </article>
+
+    </div>
+
+    <div class="boton-centro">
+      <button onclick="window.location.href='formulario.html'">
+        Realiza tu análisis educativo
+      </button>
+    </div>
+  </section>
+
+  <!-- ========================= -->
+  <!-- MODALES ADAPTADOS A EMPRENDER -->
+  <!-- ========================= -->
+
+  <!-- PLATAFORMAS -->
+  <div id="edu-plataformas" class="modal">
+    <div class="modal-content">
+      <span class="cerrar" onclick="cerrarModal('edu-plataformas')">&times;</span>
+
+      <h2>Curso de Creación de Plataformas Educativas</h2>
+
+      <div class="modal-seccion">
+        <h3>📌 ¿Por qué ayuda a emprender?</h3>
+        <p>
+          Crear cursos, talleres o academias digitales es uno de los modelos más escalables y rentables.
+          Puedes enseñar lo que sabes, incluso mientras sigues aprendiendo.
+        </p>
+      </div>
+
+      <div class="modal-seccion">
+        <h3>💰 Inversión</h3>
+        <ul>
+          <li>Producción básica: S/ 300 – S/ 1,200</li>
+          <li>Software: desde S/ 0</li>
+        </ul>
+      </div>
+
+      <div class="modal-seccion">
+        <h3>🚀 Qué aprenderás</h3>
+        <ul>
+          <li>Crear cursos digitales</li>
+          <li>Grabar clases simples</li>
+          <li>Subir contenido a plataformas</li>
+          <li>Vender cursos sin publicidad costosa</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <!-- TUTORÍAS -->
+  <div id="edu-tutorias" class="modal">
+    <div class="modal-content">
+      <span class="cerrar" onclick="cerrarModal('edu-tutorias')">&times;</span>
+
+      <h2>Tutorías para Emprender</h2>
+
+      <div class="modal-seccion">
+        <h3>📌 ¿Por qué funciona?</h3>
+        <p>
+          Puedes empezar hoy mismo dando clases, mentorías o asesorías en temas que domines,
+          incluso si estás aprendiendo: solo necesitas ir un paso adelante.
+        </p>
+      </div>
+
+      <div class="modal-seccion">
+        <h3>💰 Inversión</h3>
+        <p>Mínima: solo tu tiempo, un celular y conexión a internet.</p>
+      </div>
+
+      <div class="modal-seccion">
+        <h3>🚀 Qué puedes enseñar</h3>
+        <ul>
+          <li>Matemática, comunicación o idiomas</li>
+          <li>Habilidades digitales básicas</li>
+          <li>Marketing, IA o herramientas útiles</li>
+          <li>Preparación universitaria</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <!-- REALIDAD AUMENTADA -->
+  <div id="edu-ra" class="modal">
+    <div class="modal-content">
+      <span class="cerrar" onclick="cerrarModal('edu-ra')">&times;</span>
+
+      <h2>Tecnologías Educativas para Emprender</h2>
+
+      <div class="modal-seccion">
+        <h3>📌 ¿Cómo ayuda al emprendimiento?</h3>
+        <p>
+          Permite diferenciar tus servicios, cursos o propuestas, ofreciendo experiencias
+          modernas y muy atractivas para estudiantes o clientes.
+        </p>
+      </div>
+
+      <div class="modal-seccion">
+        <h3>💡 Aplicaciones</h3>
+        <ul>
+          <li>Cursos inmersivos</li>
+          <li>Visitas guiadas digitales</li>
+          <li>Experiencias interactivas</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <!-- IA -->
+  <div id="edu-ia" class="modal">
+    <div class="modal-content">
+      <span class="cerrar" onclick="cerrarModal('edu-ia')">&times;</span>
+
+      <h2>IA para Emprender</h2>
+
+      <div class="modal-seccion">
+        <h3>📌 ¿Por qué es clave?</h3>
+        <p>
+          La inteligencia artificial te permite automatizar tareas, crear contenido y mejorar tu productividad sin experiencia previa.
+        </p>
+      </div>
+
+      <div class="modal-seccion">
+        <h3>🚀 Qué podrás hacer</h3>
+        <ul>
+          <li>Crear imágenes, textos y videos</li>
+          <li>Optimizar tus procesos</li>
+          <li>Atención al cliente automatizada</li>
+          <li>Creación rápida de ideas de negocio</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <!-- EDUACIÓN CORPORATIVA -->
+  <div id="edu-corporativo" class="modal">
+    <div class="modal-content">
+      <span class="cerrar" onclick="cerrarModal('edu-corporativo')">&times;</span>
+
+      <h2>Curso de Educación Corporativa</h2>
+
+      <div class="modal-seccion">
+        <h3>📌 ¿Por qué sirve para emprender?</h3>
+        <p>
+          Aprendes a capacitar empresas en habilidades clave como liderazgo, ventas, comunicación y tecnología.
+        </p>
+      </div>
+
+      <div class="modal-seccion">
+        <h3>💰 Ingresos</h3>
+        <p>Puedes vender talleres, consultorías o capacitaciones desde S/ 300 hasta S/ 3,000 por sesión.</p>
+      </div>
+
+      <div class="modal-seccion">
+        <h3>💡 Ejemplos de cursos</h3>
+        <ul>
+          <li>Habilidades blandas</li>
+          <li>Ventas y atención al cliente</li>
+          <li>Habilidades digitales</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <!-- JS -->
+  <script src="js/script.js"></script>
+
+  <!-- FOOTER -->
+  <footer>
+    © 2025 CONECTA MERCADO — Todos los derechos reservados
+  </footer>
+</body>
+<!-- MODAL CREDITOS -->
+<div id="modalCreditos" class="modal">
+  <div class="modal-content" style="max-width:420px; text-align:center;">
+    <span class="cerrar" onclick="cerrarModal('modalCreditos')">&times;</span>
+
+    <h2 style="margin-bottom:10px;">Créditos</h2>
+    <p><b>Colegio Nacional de San José – Chiclayo</b></p>
+
+    <div style="margin-top:18px; text-align:left;">
+      <p><b>Creadores / Representantes:</b></p>
+      <ul style="padding-left:18px; line-height:1.6;">
+        <li>Regalado Gonzales Jheremy Anderson</li>
+        <li>Riojas Escuadra Miguel Alberto</li>
+        <li>Marco Alonso Suclupe Gil</li>
+        <li>Castrejon Olascoaga Leonardo David</li>
+        <li>Guerrero Castañeda Antony Jahir</li>
+      </ul>
+    </div>
+  </div>
+</div>
+</html>

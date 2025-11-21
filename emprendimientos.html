@@ -1,0 +1,584 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Emprendimientos Rentables | Conecta Mercado</title>
+  <link rel="stylesheet" href="css/estilo.css">
+</head>
+<body>
+
+  <!-- NAV -->
+  <header class="navbar">
+  <img src="https://i.pinimg.com/736x/38/5e/73/385e73381dcdd6b004acf7d2f9cf3d35.jpg" class="logo-navbar" onclick="abrirModal('modalCreditos')" alt="Logo San José">
+
+  <h1>CONECTA MERCADO</h1>
+  <nav>
+      <a href="index.html">Inicio</a>
+      <a href="analisis.html">Análisis</a>
+      <a href="emprendimientos.html" class="activo">Emprendimientos</a>
+      <a href="educacion.html">Educación</a>
+    </nav>
+  </header>
+
+  <!-- HERO -->
+  <section class="subhero emprendimientos">
+    <div class="overlay"></div>
+    <div class="subhero-content">
+      <h2>EMPRENDIMIENTOS RENTABLES</h2>
+      <p>Descubre las mejores oportunidades de negocio en el presente y el futuro.</p>
+    </div>
+  </section>
+
+  <!-- DASHBOARD RESUMEN -->
+  <section class="contenido">
+    <h3>Ideas destacadas por sectores</h3>
+
+    <div class="dashboard-resumen">
+      <div class="kpi">
+        <span class="kpi-label">Sectores analizados</span>
+        <span class="kpi-value">6</span>
+        <span class="kpi-tag">Cobertura actual</span>
+      </div>
+
+      <div class="kpi">
+        <span class="kpi-label">Enfoque recomendado</span>
+        <span class="kpi-value">Digital & IA</span>
+        <span class="kpi-tag">Alta escalabilidad</span>
+      </div>
+
+      <div class="kpi">
+        <span class="kpi-label">Ticket promedio estimado</span>
+        <span class="kpi-value">S/ 500 – S/ 3,000</span>
+        <span class="kpi-tag">Baja a media inversión</span>
+      </div>
+
+      <div class="dashboard-filtros">
+        <label for="filtroPerfil">Filtrar por perfil:</label>
+        <select id="filtroPerfil">
+          <option value="todos">Todos</option>
+          <option value="baja-inversion">Baja inversión inicial</option>
+          <option value="digital">Enfoque digital</option>
+          <option value="impacto-social">Impacto social / ecológico</option>
+          <option value="innovacion">Alta innovación</option>
+        </select>
+      </div>
+    </div>
+
+    <!-- GRID DE SECTORES -->
+    <div class="cards-grid">
+
+      <!-- TECNOLOGÍA Y DIGITAL -->
+      <article class="card-pro" onclick="abrirModal('tech')" data-perfil="baja-inversion digital innovacion">
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSD3ux27vWF77qEA9ynfEZZ6oh5RCirqK5W5Q&s" alt="Tecnología y Digital">
+        <div class="info">
+          <h4>Tecnología y Digital</h4>
+          <p>Software, IA, automatización y servicios digitales con alta demanda y escalabilidad.</p>
+          <div class="metricas">
+            <div><span>+18%</span><small>Crecimiento anual</small></div>
+            <div><span>Alta</span><small>Rentabilidad</small></div>
+            <div><span>Muy alta</span><small>Demanda</small></div>
+          </div>
+        </div>
+      </article>
+
+      <!-- SOSTENIBILIDAD -->
+      <article class="card-pro" onclick="abrirModal('eco')" data-perfil="impacto-social innovacion">
+        <img src="https://responsabilidadempresarial.one/wp-content/uploads/como-elaborar-un-plan-ambiental.jpg" alt="Sostenibilidad y Ecología">
+        <div class="info">
+          <h4>Sostenibilidad y Ecología</h4>
+          <p>Negocios verdes, economía circular y soluciones ambientales con propósito social.</p>
+          <div class="metricas">
+            <div><span>+12%</span><small>Energías limpias</small></div>
+            <div><span>Media</span><small>Inversión</small></div>
+            <div><span>Alta</span><small>Proyección 2030</small></div>
+          </div>
+        </div>
+      </article>
+
+      <!-- SALUD -->
+      <article class="card-pro" onclick="abrirModal('salud')" data-perfil="baja-inversion impacto-social">
+        <img src="https://www.altodirectivo.com/userfiles/salud_cigna_consejos.jpg" alt="Salud y Bienestar">
+        <div class="info">
+          <h4>Salud y Bienestar</h4>
+          <p>Servicios digitales y presenciales enfocados en salud física y emocional.</p>
+          <div class="metricas">
+            <div><span>+25%</span><small>Telemedicina</small></div>
+            <div><span>Baja</span><small>Competencia local</small></div>
+            <div><span>Alta</span><small>Fidelización</small></div>
+          </div>
+        </div>
+      </article>
+
+      <!-- EDUCACIÓN -->
+      <article class="card-pro" onclick="abrirModal('edu')" data-perfil="baja-inversion digital impacto-social">
+        <img src="https://www.shutterstock.com/image-vector/colorful-horizontal-banner-hands-typing-260nw-1104875084.jpg" alt="Educación y Formación">
+        <div class="info">
+          <h4>Educación y Formación</h4>
+          <p>E-learning, academias digitales y mentorías para actualizar habilidades.</p>
+          <div class="metricas">
+            <div><span>+10%</span><small>Crecimiento e-learning</small></div>
+            <div><span>Muy baja</span><small>Inversión</small></div>
+            <div><span>Alta</span><small>Escalabilidad</small></div>
+          </div>
+        </div>
+      </article>
+
+      <!-- INNOVACIÓN -->
+      <article class="card-pro" onclick="abrirModal('innov')" data-perfil="digital innovacion">
+        <img src="https://theagilecompany.org/wp-content/uploads/2024/03/The-Future-of-Technological-Innovation.png" alt="Innovación y Futuro">
+        <div class="info">
+          <h4>Innovación y Futuro</h4>
+          <p>IA avanzada, realidad aumentada, robótica y tecnologías emergentes.</p>
+          <div class="metricas">
+            <div><span>+40%</span><small>IA aplicada</small></div>
+            <div><span>Alta</span><small>Innovación</small></div>
+            <div><span>Moderada</span><small>Competencia</small></div>
+          </div>
+        </div>
+      </article>
+
+      <!-- GAMING / STREAMING / CONTENIDO DIGITAL -->
+      <article class="card-pro" onclick="abrirModal('gaming')" data-perfil="digital baja-inversion innovacion">
+        <img src="https://img.redbull.com/images/c_crop,w_5760,h_2880,x_0,y_0/c_auto,w_1200,h_600/f_auto,q_auto/redbullcom/2020/4/27/wyfpp7nlu8xyrazwe9b2/gamer-streaming-custom-habitacion-red-bull" alt="Gaming y Streaming">
+        <div class="info">
+          <h4>Gaming, Streaming y Contenido Digital</h4>
+          <p>Streaming, creación de contenido, e-sports y servicios digitales muy demandados.</p>
+          <div class="metricas">
+            <div><span>+23%</span><small>Crecimiento anual</small></div>
+            <div><span>Baja–Media</span><small>Inversión</small></div>
+            <div><span>Alta</span><small>Demanda</small></div>
+          </div>
+        </div>
+      </article>
+
+    </div>
+  </section>
+
+ <div class="boton-centro" style="margin-top:40px; display:flex; justify-content:center;">
+  <button class="btn-educacion" onclick="window.location.href='educacion.html'">
+    Ver educación
+  </button>
+</div>
+
+
+  <!-- ========================= -->
+  <!-- MODALES POR SECTOR -->
+  <!-- ========================= -->
+
+  <!-- TECNOLOGÍA Y DIGITAL -->
+  <div id="tech" class="modal">
+    <div class="modal-content">
+      <span class="cerrar" onclick="cerrarModal('tech')">&times;</span>
+
+      <h2>Tecnología y Digital</h2>
+      <div class="modal-progress">
+        <div class="modal-progress-bar"></div>
+        <span class="modal-progress-text">1 / 5</span>
+      </div>
+
+      <!-- A. Panorama -->
+      <div class="modal-seccion">
+        <h3>📌 Panorama del mercado (Perú)</h3>
+        <p>
+          El sector tecnológico concentra una parte importante de la inversión en Perú y Latinoamérica.
+          La demanda por software a medida, servicios en la nube, automatización y soluciones con IA
+          continúa creciendo en pymes, corporativos y sectores como educación, salud y retail.
+        </p>
+      </div>
+
+      <!-- B. Inversión inicial -->
+      <div class="modal-seccion">
+        <h3>💰 Inversión inicial estimada</h3>
+        <ul>
+          <li><b>Nivel básico (freelancer):</b> S/ 1,000 – S/ 3,000 (laptop básica, internet estable, herramientas de desarrollo gratuitas).</li>
+          <li><b>Nivel intermedio (microempresa):</b> S/ 4,000 – S/ 10,000 (mejor equipo, licencias, publicidad básica).</li>
+          <li><b>Nivel avanzado (agencia tecnológica):</b> S/ 15,000 – S/ 40,000+ (equipo, personal, marca y campañas constantes).</li>
+        </ul>
+      </div>
+
+      <!-- C. Ingresos -->
+      <div class="modal-seccion">
+        <h3>📊 Ingresos mensuales estimados</h3>
+        <ul>
+          <li><b>Desarrollador freelance:</b> S/ 2,000 – S/ 8,000 / mes.</li>
+          <li><b>Pequeña agencia digital:</b> S/ 6,000 – S/ 20,000 / mes.</li>
+          <li><b>Soluciones SaaS consolidadas:</b> S/ 15,000 – S/ 50,000+ / mes (cuando escala).</li>
+        </ul>
+        <p>Los resultados dependen del nicho, posicionamiento y cartera de clientes.</p>
+      </div>
+
+      <!-- D. Emprendimientos posibles -->
+      <div class="modal-seccion">
+        <h3>🚀 Emprendimientos que puedes iniciar</h3>
+        <ul>
+          <li>Desarrollo de software a medida para pymes.</li>
+          <li>Plataforma SaaS de gestión (citas, ventas, inventarios, etc.).</li>
+          <li>Automatización de procesos con bots y herramientas no-code.</li>
+          <li>Agencia de marketing digital y creación de funnels de venta.</li>
+          <li>Servicios de ciberseguridad básica y copias de respaldo.</li>
+        </ul>
+      </div>
+
+      <!-- E. Recomendación -->
+      <div class="modal-seccion">
+        <h3>🎯 Recomendación estratégica</h3>
+        <p>
+          Ideal para emprendedores con perfil técnico o interés por aprender herramientas digitales.
+          La clave está en elegir un nicho específico (ej. clínicas, colegios, talleres) y resolver
+          un problema muy claro con una solución simple pero efectiva.
+        </p>
+      </div>
+    </div>
+  </div>
+
+  <!-- SOSTENIBILIDAD Y ECOLOGÍA -->
+  <div id="eco" class="modal">
+    <div class="modal-content">
+      <span class="cerrar" onclick="cerrarModal('eco')">&times;</span>
+
+      <h2>Sostenibilidad y Ecología</h2>
+      <div class="modal-progress">
+        <div class="modal-progress-bar"></div>
+        <span class="modal-progress-text">1 / 5</span>
+      </div>
+
+      <!-- A -->
+      <div class="modal-seccion">
+        <h3>🌍 Panorama del mercado (Perú)</h3>
+        <p>
+          El consumo responsable y las regulaciones ambientales impulsan nuevas oportunidades:
+          productos biodegradables, energías renovables y servicios de consultoría ambiental.
+          Cada vez más empresas buscan reducir su huella de carbono y cumplir estándares verdes.
+        </p>
+      </div>
+
+      <!-- B -->
+      <div class="modal-seccion">
+        <h3>💰 Inversión inicial estimada</h3>
+        <ul>
+          <li><b>Tienda pequeña de productos eco:</b> S/ 3,000 – S/ 12,000 (stock inicial + canal digital).</li>
+          <li><b>Consultoría ambiental:</b> S/ 2,000 – S/ 6,000 (formación, certificaciones, marketing).</li>
+          <li><b>Servicios de eficiencia energética:</b> S/ 5,000 – S/ 20,000+ (equipos, mediciones, transporte).</li>
+        </ul>
+      </div>
+
+      <!-- C -->
+      <div class="modal-seccion">
+        <h3>📊 Ingresos mensuales estimados</h3>
+        <ul>
+          <li><b>Tienda eco (online o física pequeña):</b> S/ 2,000 – S/ 8,000 / mes.</li>
+          <li><b>Consultoría ambiental para pymes:</b> S/ 3,000 – S/ 15,000 / mes.</li>
+          <li><b>Proyectos de eficiencia energética:</b> S/ 5,000 – S/ 20,000 / mes (según contratos).</li>
+        </ul>
+      </div>
+
+      <!-- D -->
+      <div class="modal-seccion">
+        <h3>💡 Emprendimientos posibles</h3>
+        <ul>
+          <li>Tienda de productos biodegradables y reutilizables.</li>
+          <li>Consultoría para certificaciones ambientales y reportes ESG.</li>
+          <li>Asesoría en ahorro de energía para hogares y negocios.</li>
+          <li>Servicios de gestión y reciclaje de residuos.</li>
+        </ul>
+      </div>
+
+      <!-- E -->
+      <div class="modal-seccion">
+        <h3>🎯 Recomendación</h3>
+        <p>
+          Recomendado para emprendedores con sensibilidad ambiental.
+          Es clave comunicar el impacto real: ahorro de energía, reducción de residuos o CO₂,
+          y aprovechar programas de apoyo, concursos y fondos verdes.
+        </p>
+      </div>
+    </div>
+  </div>
+
+  <!-- SALUD Y BIENESTAR -->
+  <div id="salud" class="modal">
+    <div class="modal-content">
+      <span class="cerrar" onclick="cerrarModal('salud')">&times;</span>
+
+      <h2>Salud y Bienestar</h2>
+      <div class="modal-progress">
+        <div class="modal-progress-bar"></div>
+        <span class="modal-progress-text">1 / 5</span>
+      </div>
+
+      <!-- A -->
+      <div class="modal-seccion">
+        <h3>🏥 Panorama actual (Perú)</h3>
+        <p>
+          Tras la pandemia, la demanda de servicios de salud digital, prevención y bienestar emocional
+          ha crecido de forma sostenida. Existen oportunidades en teleconsulta, nutrición, salud mental
+          y programas de estilo de vida saludable.
+        </p>
+      </div>
+
+      <!-- B -->
+      <div class="modal-seccion">
+        <h3>💰 Inversión inicial estimada</h3>
+        <ul>
+          <li><b>Consultas online / coaching:</b> S/ 800 – S/ 3,000 (equipos básicos, software, marca personal).</li>
+          <li><b>Pequeño centro o gabinete:</b> S/ 6,000 – S/ 20,000 (adecuación de local, mobiliario, permisos).</li>
+          <li><b>Programas digitales de salud:</b> S/ 3,000 – S/ 10,000 (plataforma, marketing, contenido).</li>
+        </ul>
+      </div>
+
+      <!-- C -->
+      <div class="modal-seccion">
+        <h3>📊 Ingresos mensuales estimados</h3>
+        <ul>
+          <li><b>Profesional independiente:</b> S/ 2,000 – S/ 8,000 / mes.</li>
+          <li><b>Centro pequeño de bienestar:</b> S/ 5,000 – S/ 18,000 / mes.</li>
+          <li><b>Programas digitales escalables:</b> S/ 4,000 – S/ 20,000 / mes (según alcance).</li>
+        </ul>
+      </div>
+
+      <!-- D -->
+      <div class="modal-seccion">
+        <h3>💡 Emprendimientos posibles</h3>
+        <ul>
+          <li>Programas online de nutrición y control de peso.</li>
+          <li>Plataforma de seguimiento para pacientes crónicos.</li>
+          <li>Servicios de bienestar emocional, mindfulness y manejo de estrés.</li>
+          <li>Venta de planes de alimentación saludable y menús semanales.</li>
+        </ul>
+      </div>
+
+      <!-- E -->
+      <div class="modal-seccion">
+        <h3>🎯 Conclusión</h3>
+        <p>
+          Ideal para profesionales de salud o emprendedores con aliados del sector.
+          La confianza y la ética son clave: la recomendación es empezar con servicios en los
+          que se tenga respaldo profesional y luego escalar a lo digital.
+        </p>
+      </div>
+    </div>
+  </div>
+
+  <!-- EDUCACIÓN Y FORMACIÓN -->
+  <div id="edu" class="modal">
+    <div class="modal-content">
+      <span class="cerrar" onclick="cerrarModal('edu')">&times;</span>
+
+      <h2>Educación y Formación</h2>
+      <div class="modal-progress">
+        <div class="modal-progress-bar"></div>
+        <span class="modal-progress-text">1 / 5</span>
+      </div>
+
+      <!-- A -->
+      <div class="modal-seccion">
+        <h3>🎓 Panorama del mercado</h3>
+        <p>
+          La educación online se consolidó en Perú como complemento y alternativa a la educación tradicional.
+          Crece la demanda de cursos cortos, formación práctica, actualización profesional y habilidades digitales.
+        </p>
+      </div>
+
+      <!-- B -->
+      <div class="modal-seccion">
+        <h3>💰 Inversión inicial estimada</h3>
+        <ul>
+          <li><b>Curso online simple:</b> S/ 500 – S/ 2,000 (equipo, plataforma, diseño básico).</li>
+          <li><b>Academia digital pequeña:</b> S/ 3,000 – S/ 8,000 (múltiples cursos, publicidad).</li>
+          <li><b>Formación corporativa:</b> S/ 5,000 – S/ 20,000+ (equipo, materiales, viajes).</li>
+        </ul>
+      </div>
+
+      <!-- C -->
+      <div class="modal-seccion">
+        <h3>📊 Ingresos mensuales estimados</h3>
+        <ul>
+          <li><b>Creador de 1–2 cursos:</b> S/ 1,000 – S/ 6,000 / mes.</li>
+          <li><b>Academia online estable:</b> S/ 4,000 – S/ 18,000 / mes.</li>
+          <li><b>Formación corporativa:</b> S/ 6,000 – S/ 25,000 / mes (contratos empresariales).</li>
+        </ul>
+      </div>
+
+      <!-- D -->
+      <div class="modal-seccion">
+        <h3>💡 Emprendimientos posibles</h3>
+        <ul>
+          <li>Academia online de marketing, programación o habilidades digitales.</li>
+          <li>Mentorías 1 a 1 y grupales para emprendedores.</li>
+          <li>Cursos cortos para colegios o universidades (como aliados).</li>
+          <li>Formación en educación financiera para jóvenes.</li>
+        </ul>
+      </div>
+
+      <!-- E -->
+      <div class="modal-seccion">
+        <h3>🎯 Recomendación</h3>
+        <p>
+          Recomendado para personas que dominan un tema y disfrutan enseñar.
+          La clave está en ofrecer contenido práctico, actualizado y con ejemplos aplicados
+          al contexto peruano o local.
+        </p>
+      </div>
+    </div>
+  </div>
+
+  <!-- INNOVACIÓN Y FUTURO -->
+  <div id="innov" class="modal">
+    <div class="modal-content">
+      <span class="cerrar" onclick="cerrarModal('innov')">&times;</span>
+
+      <h2>Innovación y Futuro</h2>
+      <div class="modal-progress">
+        <div class="modal-progress-bar"></div>
+        <span class="modal-progress-text">1 / 5</span>
+      </div>
+
+      <!-- A -->
+      <div class="modal-seccion">
+        <h3>🚀 Panorama</h3>
+        <p>
+          La innovación tecnológica se acelera con IA generativa, robótica colaborativa, realidad extendida
+          y nuevas interfaces. El tiempo de adopción es cada vez menor, y las empresas buscan soluciones
+          para mejorar productividad y experiencia del cliente.
+        </p>
+      </div>
+
+      <!-- B -->
+      <div class="modal-seccion">
+        <h3>💰 Inversión inicial estimada</h3>
+        <ul>
+          <li><b>Servicios de IA aplicada:</b> S/ 3,000 – S/ 12,000 (equipo, herramientas, formación).</li>
+          <li><b>Soluciones AR/VR pequeñas:</b> S/ 8,000 – S/ 25,000+ (equipos, desarrollo, demos).</li>
+          <li><b>Proyectos de automatización:</b> S/ 5,000 – S/ 20,000+ (sensores, hardware, software).</li>
+        </ul>
+      </div>
+
+      <!-- C -->
+      <div class="modal-seccion">
+        <h3>📊 Ingresos mensuales estimados</h3>
+        <ul>
+          <li><b>Consultor en IA:</b> S/ 4,000 – S/ 18,000 / mes.</li>
+          <li><b>Soluciones AR/VR a medida:</b> S/ 6,000 – S/ 25,000 / mes.</li>
+          <li><b>Automatización para empresas:</b> S/ 8,000 – S/ 30,000 / mes según proyectos.</li>
+        </ul>
+      </div>
+
+      <!-- D -->
+      <div class="modal-seccion">
+        <h3>💡 Emprendimientos posibles</h3>
+        <ul>
+          <li>Consultoría en uso de IA para empresas tradicionales.</li>
+          <li>Experiencias de realidad aumentada para educación, turismo o retail.</li>
+          <li>Automatización de procesos en almacenes, tiendas o talleres.</li>
+        </ul>
+      </div>
+
+      <!-- E -->
+      <div class="modal-seccion">
+        <h3>🎯 Conclusión</h3>
+        <p>
+          Recomendado para emprendedores con alta tolerancia al riesgo y vocación innovadora.
+          Formar alianzas con universidades, centros de investigación o startups tecnológicas
+          puede acelerar el crecimiento y el acceso a proyectos grandes.
+        </p>
+      </div>
+    </div>
+  </div>
+
+  <!-- GAMING, STREAMING Y CONTENIDO DIGITAL -->
+  <div id="gaming" class="modal">
+    <div class="modal-content">
+      <span class="cerrar" onclick="cerrarModal('gaming')">&times;</span>
+
+      <h2>Gaming, Streaming y Contenido Digital</h2>
+      <div class="modal-progress">
+        <div class="modal-progress-bar"></div>
+        <span class="modal-progress-text">1 / 5</span>
+      </div>
+
+      <!-- A -->
+      <div class="modal-seccion">
+        <h3>🎮 Panorama actual (Perú)</h3>
+        <p>
+          El sector gaming y de creadores de contenido crece año a año. Miles de jóvenes generan ingresos
+          con streaming en plataformas como Twitch, YouTube, TikTok, además de servicios como edición
+          de video, miniaturas o gestión de redes para otros creadores.
+        </p>
+      </div>
+
+      <!-- B -->
+      <div class="modal-seccion">
+        <h3>💰 Inversión inicial estimada</h3>
+        <ul>
+          <li><b>Nivel básico:</b> S/ 350 – S/ 1,200 (micrófono simple, audífonos, cámara básica, luz).</li>
+          <li><b>Nivel intermedio:</b> S/ 1,500 – S/ 3,500 (PC o laptop mejor, periféricos, mejor iluminación).</li>
+          <li><b>Nivel profesional:</b> S/ 4,000 – S/ 10,000+ (PC potente, varias pantallas, software de pago, set completo).</li>
+        </ul>
+      </div>
+
+      <!-- C -->
+      <div class="modal-seccion">
+        <h3>📊 Ingresos mensuales estimados</h3>
+        <ul>
+          <li><b>Streamer principiante:</b> S/ 300 – S/ 1,200 / mes (donaciones, algo de publicidad).</li>
+          <li><b>Streamer intermedio:</b> S/ 1,500 – S/ 6,000 / mes (suscripciones, patrocinios pequeños).</li>
+          <li><b>Streamer profesional:</b> S/ 7,000 – S/ 25,000+ / mes (marcas, campañas, múltiples ingresos).</li>
+          <li><b>Creador de contenido y editor:</b> S/ 800 – S/ 7,000 / mes (servicios a otros canales).</li>
+        </ul>
+      </div>
+
+      <!-- D -->
+      <div class="modal-seccion">
+        <h3>💡 Emprendimientos posibles</h3>
+        <ul>
+          <li>Canal de streaming de videojuegos o variedad (gaming, charlas, IRL).</li>
+          <li>Creación de contenido corto (clips, TikToks, reels) para marcas o creadores.</li>
+          <li>Servicio de edición de video para streamers y youtubers.</li>
+          <li>Diseño de overlays, emotes, miniaturas y banners para canales.</li>
+        </ul>
+      </div>
+
+      <!-- E -->
+      <div class="modal-seccion">
+        <h3>🎯 Recomendación estratégica</h3>
+        <p>
+          Ideal para jóvenes que ya consumen contenido gamer y están dispuestos a crear
+          de forma constante. Lo más importante es la disciplina y construir comunidad:
+          empezar con bajo presupuesto, mejorar la calidad poco a poco y diversificar las
+          fuentes de ingreso (donaciones, patrocinios, servicios).
+        </p>
+      </div>
+    </div>
+  </div>
+
+  <!-- JS -->
+  <script src="js/script.js"></script>
+
+
+  <!-- FOOTER -->
+  <footer>
+    © 2025 CONECTA MERCADO — Todos los derechos reservados
+  </footer>
+</body>
+<!-- MODAL CREDITOS -->
+<div id="modalCreditos" class="modal">
+  <div class="modal-content" style="max-width:420px; text-align:center;">
+    <span class="cerrar" onclick="cerrarModal('modalCreditos')">&times;</span>
+
+    <h2 style="margin-bottom:10px;">Créditos</h2>
+    <p><b>Colegio Nacional de San José – Chiclayo</b></p>
+
+    <div style="margin-top:18px; text-align:left;">
+      <p><b>Creadores / Representantes:</b></p>
+      <ul style="padding-left:18px; line-height:1.6;">
+        <li>Regalado Gonzales Jheremy Anderson</li>
+        <li>Riojas Escuadra Miguel Alberto</li>
+        <li>Marco Alonso Suclupe Gil</li>
+        <li>Castrejon Olascoaga Leonardo David</li>
+        <li>Guerrero Castañeda Antony Jahir</li>
+      </ul>
+    </div>
+  </div>
+</div>
+</html>
